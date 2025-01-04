@@ -123,8 +123,11 @@ header h1 {
 #container3D canvas {
   width: 75vw !important;
   height: 75vh !important;
-  margin-left:5em;
   
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
 }
 
 }
