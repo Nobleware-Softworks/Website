@@ -79,7 +79,8 @@ header h1 {
   width: 100vw !important;
   height: 100vh !important;
   position: absolute;
-  top: -15em;
+  top: -25em;
+  margin-bottom: 2em;
   left: 0;
   z-index:0;
 }
