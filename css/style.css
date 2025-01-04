@@ -81,7 +81,7 @@ header h1 {
   position: absolute;
   top: -25em;
   margin-bottom: 2em;
-  left: 0;
+  align-self: center;
   z-index:0;
 }
 
@@ -123,7 +123,7 @@ header h1 {
 #container3D canvas {
   width: 75vw !important;
   height: 75vh !important;
-  align-self: center;
+  
   
 }
 
