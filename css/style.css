@@ -108,11 +108,11 @@ header h1 {
 .box{
   width: 70%;
   height:20em;
-  margin-bottom: 10em;
+  margin-bottom: 15em;
 }
 
 .wrapper{
-  margin: 5em;
+  margin: 1em;
   flex-direction: column;
   align-items: center;
   align-content: center;
