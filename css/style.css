@@ -99,3 +99,10 @@ header h1 {
   transform: translateX(0);
 }
 
+
+@media all and (max-width: 800px) { 
+.navbar h1{
+  font-size: 14px;
+}
+
+}
