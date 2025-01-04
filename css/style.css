@@ -105,9 +105,11 @@ header h1 {
   font-size: 30px;
 }
 
-.wrapper{
-  flex-direction: column;
+.box{
   width: 70%;
 }
 
+.wrapper{
+  flex-direction: column;
+}
 }
