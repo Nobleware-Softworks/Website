@@ -18,33 +18,35 @@ body {
   top:0px;
   position: fixed;
   z-index:1;
+  
 }
 
 section{
   display: grid;
   place-items: center;
   align-content: center;
-  margin-top: 70vh;
-  margin-bottom: -10em;
   
 }
+
 
 .wrapper{
   display: flex;
   justify-content: center;
   position: relative;
+ 
+  
 }
 
 .box{
   padding: 10px;
   margin: 15px;
   width: 17%;
-  height: 30em;
   background-color: rgba(255, 255, 255, 0.20);
   margin-bottom: -15em;
   border-radius: 15px;
   line-height: 20px;
   text-align: justify;
+  
 }
 
 .box p{
@@ -76,13 +78,13 @@ header h1 {
 }
 
 #container3D canvas {
+ 
   width: 100vw !important;
   height: 100vh !important;
   position: absolute;
-  top: -25em;
-  margin-bottom: 2em;
   left:0px;
   z-index:0;
+  top:-35em;
 }
 
 .hidden{
@@ -91,6 +93,9 @@ header h1 {
   transform: translateX(-100%);
   transition: all 1s;
   z-index:0;
+  margin-top: 40em;
+  
+ 
 }
 
 .show{
@@ -99,6 +104,11 @@ header h1 {
   transform: translateX(0);
 }
 
+
+.rear{
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), rgb(0, 0, 0),  rgb(0, 0, 0));
+  padding: 20px;
+}
 
 @media all and (max-width: 800px) { 
 .navbar h1{
@@ -120,10 +130,6 @@ header h1 {
   justify-items: center;
 }
 
-#container3D canvas {
-  width: 75vw !important;
-  height: 75vh !important;
-  margin-left: 3em;
-}
+
 
 }
