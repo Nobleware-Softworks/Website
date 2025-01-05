@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
-  background-color: #27323a;
+  background-color: #111213;
   overflow-x: hidden;
   color: white;
  /* background-image: url('../test.png'); */
@@ -132,13 +132,15 @@ header h1 {
 }
 
 .hidden{
-  margin-bottom: -5em;
+  margin-bottom: -10em;
 }
 
 #container3D canvas {
   width: 80vw !important;
   height: 80vh !important;
   left: 35px;
+  margin-bottom: -5em;
+  margin-top: 5em;
 }
 
 }
