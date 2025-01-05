@@ -108,6 +108,7 @@ header h1 {
 .rear{
   bottom:0px;
   padding: 10px;
+  height: 150px;
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), rgb(0, 0, 0),  rgb(0, 0, 0));
 }
 
@@ -136,11 +137,11 @@ header h1 {
 }
 
 #container3D canvas {
-  width: 80vw !important;
-  height: 80vh !important;
+  width: 90vw !important;
+  height: 90vh !important;
   left: 35px;
-  margin-bottom: -5em;
-  margin-top: 5em;
+  margin-bottom: -10em;
+  margin-top: 10em;
 }
 
 }
