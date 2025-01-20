@@ -22,7 +22,7 @@ body {
 }
 
 .navbar h1{
-  filter: drop-shadow(0 0 1px #bfb0f3) drop-shadow(0 0 2px #b0a1e7) drop-shadow(0 0 10px #c6bdf1);
+  filter: drop-shadow(0 0 1px rgb(204, 202, 240)) drop-shadow(0 0 1px rgb(204, 202, 240)) drop-shadow(0 0 10px rgb(204, 202, 240));
   font-family: "Copperplate Gothic Light";
   font-weight: 100;
 }
