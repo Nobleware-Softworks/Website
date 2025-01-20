@@ -21,6 +21,13 @@ body {
   
 }
 
+.navbar h1{
+  filter: drop-shadow(0 0 1px #bfb0f3) drop-shadow(0 0 2px #b0a1e7) drop-shadow(0 0 10px #c6bdf1);
+  font-family: "Copperplate Gothic Light";
+  font-weight: 100;
+}
+
+
 section{
   display: grid;
   place-items: center;
@@ -38,15 +45,54 @@ section{
 }
 
 .box{
-  padding: 10px;
+  
   margin: 15px;
   width: 17%;
-  background-color: rgba(255, 255, 255, 0.20);
+  background-color: rgb(53, 56, 61);
   margin-bottom: -15em;
   border-radius: 15px;
   line-height: 20px;
   text-align: justify;
+  position: relative;
   
+}
+
+@property --angle{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.box::after, .box::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+}
+
+.box:hover::after, .box:hover::before{
+  padding: 3px;
+  border-radius: 15px;
+  background-image: conic-gradient(from var(--angle), transparent, rgb(208, 219, 240));
+  animation: 3s spin linear infinite;
+}
+
+.box::before{
+  filter:blur(1rem);
+  opacity: 0.5;
+}
+
+@keyframes spin{
+  from{
+    --angle: 0deg;
+  }
+  to{
+    --angle: 360deg;
+  }
 }
 
 .box p{
@@ -139,7 +185,7 @@ header h1 {
 #container3D canvas {
   width: 90vw !important;
   height: 90vh !important;
-  left: 35px;
+  left: 34px;
   margin-bottom: -10em;
   margin-top: 10em;
 }
