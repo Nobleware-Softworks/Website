@@ -14,7 +14,7 @@ html{
 
 body {
   margin: 0px;
-  margin-top: 33em;
+  margin-top: 30em;
   margin-bottom: 0em ;
   background-color: var(--primary-color);
   overflow-x: hidden;
@@ -255,8 +255,8 @@ header h1 {
 }
 
 #container3D canvas {
-  width: 75vw !important;
-  height: 75vh !important;
+  width: 100vw !important;
+  height: 100vh !important;
   top: 50%;
   left: 50%;
   translate: -50% -50%;
