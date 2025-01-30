@@ -226,6 +226,10 @@ section{
   flex-direction: column;
 }
 
+.generalText{
+  margin-left: 0em;
+}
+
 .box{
   width: 90%;
   height:25em;
