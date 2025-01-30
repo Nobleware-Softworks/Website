@@ -13,7 +13,9 @@ html{
 }
 
 body {
-  margin: 0;
+  margin: 4em;
+  margin-top: 33em;
+  margin-bottom: 0em ;
   background-color: var(--primary-color);
   overflow-x: hidden;
  /* background-image: url('../test.png'); */
@@ -39,12 +41,57 @@ body {
   font-weight: 100;
 }
 
+header {
+  margin-top: 1em;
+  text-align: center;
+  color: white;
+  font-size: 200%;
+}
+
+header h1 {
+  font-size: 2em;
+  font-weight: 900;
+}
+
 
 section{
   display: grid;
   place-items: center;
   align-content: center;
+
   
+}
+
+.generalsec{
+
+  border-bottom: double;
+  border-color: #c9c9c9;
+  padding: 4em;
+
+}
+
+.general{
+  margin-top: 1em;
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.generalText{
+
+  display: flex;
+  flex-direction: column;
+  margin-left: 2em;
+}
+
+
+.generalButtons{
+  display: flex;
+  flex-direction: row;
+}
+
+.generalButtons button{
+  margin:2em;
 }
 
 
@@ -52,7 +99,6 @@ section{
   display: flex;
   justify-content: center;
   position: relative;
- 
   
 }
 
@@ -63,7 +109,6 @@ section{
   margin: 15px;
   width: 20%;
   background-color: rgb(53, 56, 61);
-  margin-bottom: -15em;
   border-radius: 15px;
   line-height: 20px;
   text-align: justify;
@@ -125,25 +170,16 @@ section{
   transition-delay: 400ms;
 }
 
-header {
-  margin-top: 1em;
-  text-align: center;
-  color: white;
-  font-size: 200%;
-}
-
-header h1 {
-  font-size: 2em;
-  font-weight: 900;
-}
 
 #container3D canvas {
   width: 100vw !important;
   height: 100vh !important;
   position: absolute;
-  left:0px;
+
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
   z-index:0;
-  top:-35em;
 }
 
 .hidden{
@@ -152,9 +188,7 @@ header h1 {
   transform: translateX(-100%);
   transition: all 1s;
   z-index:0;
-  margin-top: 40em;
-  
- 
+  margin-top: 15em;
 }
 
 .show{
@@ -176,6 +210,10 @@ header h1 {
 
 
 @media all and (max-width: 800px) { 
+
+.body{
+  margin: 0px;
+} 
 .navbar h1{
   font-size: 30px;
 }
