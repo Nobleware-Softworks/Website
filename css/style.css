@@ -215,6 +215,7 @@ section{
   margin: 0em;
   margin-top: 0em;
   margin-bottom: 0em;
+  overflow-x: hidden;
 } 
 
 .navbar h1{
