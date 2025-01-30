@@ -13,7 +13,7 @@ html{
 }
 
 body {
-  margin: 4em;
+  margin: 0px;
   margin-top: 33em;
   margin-bottom: 0em ;
   background-color: var(--primary-color);
@@ -51,7 +51,9 @@ section{
 }
 
 .generalsec{
-
+  margin: 2%;
+  margin-top: 0em;
+  margin-bottom: 0em ;
   border-bottom: double;
   border-color: #c9c9c9;
   padding: 4em;
@@ -212,13 +214,6 @@ header h1 {
 
 @media all and (max-width: 800px) { 
 
-.body{
-  margin: 0em;
-  margin-top: 0em;
-  margin-bottom: 0em;
-  overflow-x: hidden;
-} 
-
 .navbar h1{
   font-size: 30px;
 }
@@ -269,5 +264,12 @@ header h1 {
   margin-bottom: 10em;
   overflow-x: visible;
 }
+
+.body{
+  margin: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  overflow-x: hidden;
+} 
 
 }
