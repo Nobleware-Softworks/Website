@@ -182,11 +182,12 @@ header h1 {
 }
 
 #container3D canvas {
-  width: 50vw !important;
+  width: 75vw !important;
   height: 50vh !important;
   top: 50%;
   left: 50%;
   translate: -50% -50%;
+  margin-top: -3em;
 }
 
 }
