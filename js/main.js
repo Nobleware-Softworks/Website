@@ -59,7 +59,7 @@ document.getElementById("container3D").appendChild(renderer.domElement);
 camera.position.z = objToRender === "dino" ? 12 : 500;
 camera.position.y = objToRender === "dino" ? 4 : 0;
 
-camera.position.set( 0, 4, 15 );
+camera.position.set( 0, 4, 16 );
 
 
 //Add lights to the scene, so we can actually see the 3D model
