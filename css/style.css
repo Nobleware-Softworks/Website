@@ -212,10 +212,17 @@ section{
 @media all and (max-width: 800px) { 
 
 .body{
-  margin: 0px;
+  margin: 0em;
+  margin-top: 0em;
+  margin-bottom: 0em;
 } 
+
 .navbar h1{
   font-size: 30px;
+}
+
+.general{
+  flex-direction: column;
 }
 
 .box{
