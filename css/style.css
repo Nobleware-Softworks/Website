@@ -124,7 +124,6 @@ header h1 {
 }
 
 #container3D canvas {
- 
   width: 100vw !important;
   height: 100vh !important;
   position: absolute;
@@ -183,10 +182,8 @@ header h1 {
 }
 
 #container3D canvas {
-  width: 90vw !important;
-  height: 90vh !important;
-  height:50%;
-  width:50%;
+  width: 50vw !important;
+  height: 50vh !important;
   top: 50%;
   left: 50%;
   translate: -50% -50%;
