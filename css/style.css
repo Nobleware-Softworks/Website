@@ -45,9 +45,11 @@ section{
 }
 
 .box{
-  
+  display: flex;
+  padding: 1em 1em;
+  flex-direction: column;
   margin: 15px;
-  width: 17%;
+  width: 20%;
   background-color: rgb(53, 56, 61);
   margin-bottom: -15em;
   border-radius: 15px;
@@ -174,17 +176,15 @@ header h1 {
 
 .wrapper{
   display:none;
-  margin: 1em;
-  flex-direction: column;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  justify-items: center;
+
 }
 
 .mobileWrap{
-  display: block;
-  margin: 1em;
+  display: flex;
+  margin: 2em;
+  margin-top: 10em;
+  margin-bottom: -15em;
+  padding: 1em 2em;
   flex-direction: column;
   align-items: center;
   align-content: center;
