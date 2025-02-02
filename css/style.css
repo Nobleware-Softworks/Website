@@ -24,9 +24,14 @@ body {
  user-select: none; /* Standard syntax */
 }
 
-.drop{
+#drop{
   display: none;
-  translate: 20px -70px;
+
+}
+
+.temp{
+
+  translate: 0em -100px;
 }
 .navbar button{
   background: none; /* Removes background color */
@@ -57,7 +62,7 @@ body {
 .navbar ul{
   list-style: none;
   display: flex;
-  translate: 0em -100px;
+  
 
 }
 
@@ -357,8 +362,9 @@ section{
     font-size: 24px;
   }
 
-  .drop{
+  #drop{
     display: block;
+    translate: 20px -70px;
     
   }
 
@@ -392,7 +398,26 @@ section{
     flex-direction: column;
     width: 100px;
     margin-left: 2em;
+    translate: 0em -100px;
   }
+
+  #list{
+    display: none;
+  }
+
+  .temp:hover #list{
+    display: block;
+  }
+
+  .temp{
+    translate: 0em 0px;
+  }
+
+  header h1{
+    text-align: end;
+    margin-right: 1em;
+  }
+
 
 
 
