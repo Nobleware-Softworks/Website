@@ -46,6 +46,7 @@ body {
     margin: 0;        /* Removes margin */
     box-shadow: none; /* Removes any box shadow */
     outline: none;    /* Removes outline */
+    cursor:pointer;
 }
 
 .navbar img{
@@ -183,6 +184,7 @@ section{
   color: #7f8288; 
   font-size:large; 
   border: 3px solid #7f8288;
+  cursor:pointer;
 }
 
 .generalButtons button:hover{
