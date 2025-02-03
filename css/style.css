@@ -325,6 +325,11 @@ section{
   height: auto;
 }
 
+.portrait{
+  width: 300px;
+  height: auto;
+}
+
 .rear{
   bottom:0px;
   padding-left: 2em;
