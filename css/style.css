@@ -152,6 +152,10 @@ section{
   
 }
 
+.general h3{
+  padding-left: 1em;
+}
+
 .general ul{
   list-style: none;
 }
