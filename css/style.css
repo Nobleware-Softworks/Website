@@ -2,7 +2,7 @@
 :root{
   --primary-color: #0d0e14;
   --hover-color: #caceff25;
-  --accent-color: #4144ff;
+  --accent-color: #5b5dff;
   --text-color: #c9c9c9;
 }
 
@@ -23,6 +23,12 @@ body {
  -ms-user-select: none; /* IE 10 and IE 11 */
  user-select: none; /* Standard syntax */
 }
+
+.otherpage{
+  margin-top: -25em;
+  padding: 3em;
+}
+
 
 #drop{
   display: none;
@@ -150,7 +156,7 @@ section{
 }
 
 .general img{
-  width:220px;
+  width:240px;
   margin-right: 1em;
   
 }
@@ -166,11 +172,25 @@ section{
 .generalButtons{
   display: flex;
   flex-direction: row;
+  margin-left: 3em;
 }
 
 .generalButtons button{
-  margin:2em;
+  margin:1em;
+  padding: 0.5em;
+  background-color: var(--primary-color);
+  font-weight: 800;
+  color: #7f8288; 
+  font-size:large; 
+  border: 3px solid #7f8288;
 }
+
+.generalButtons button:hover{
+  background-color: var(--hover-color);
+  
+}
+
+
 
 
 .wrapper{
@@ -191,6 +211,8 @@ section{
   line-height: 20px;
   text-align: justify;
   position: relative;
+  text-decoration: none;
+  color: var(--text-color);
   
 }
 
@@ -276,8 +298,29 @@ section{
   transform: translateX(0);
 }
 
+.testi{
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1em;
+}
+
+.testi p{
+  padding: 0em 4em 0em 4em;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
 .mobileWrap{
   display:none;
+}
+
+.runstar{
+  padding-left: 5em;
+  width: 150px;
+  height: auto;
 }
 
 .rear{
@@ -316,6 +359,10 @@ section{
 .rear a{
   color: var(--text-color);
 
+}
+
+.rear h3{
+  color: #5b5dff;
 }
 
 
@@ -396,8 +443,13 @@ section{
   overflow-x: hidden;
 } 
 
+.testi{
+  flex-direction: column;
+}
+
 .mobileTest{
-  margin-top: 80em;
+  margin-top: 30em;
+  
 }
 
 }
