@@ -2,7 +2,7 @@
 :root{
   --primary-color: #0d0e14;
   --hover-color: #caceff25;
-  --accent-color: #0071FF;
+  --accent-color: #4144ff;
   --text-color: #c9c9c9;
 }
 
@@ -145,6 +145,16 @@ section{
   
 }
 
+.general ul{
+  list-style: none;
+}
+
+.general img{
+  width:220px;
+  margin-right: 1em;
+  
+}
+
 .generalText{
 
   display: flex;
@@ -272,11 +282,42 @@ section{
 
 .rear{
   bottom:0px;
-  padding: 10px;
-  height: 150px;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
   background-color: var(--primary-color);
   border-top: 1px solid var(--hover-color);
+
+  -webkit-user-select: text; /* Safari */
+  -ms-user-select: text; /* IE 10 and IE 11 */
+  user-select: text; /* Standard syntax */
 }
+
+.rear hr{
+  border: 0.8px solid var(--hover-color);
+}
+
+.rear img{
+  width: 60px;
+}
+
+.rear ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.rear li{
+  padding:0.5em;
+}
+
+
+.rear a{
+  color: var(--text-color);
+
+}
+
 
 @media all and (max-width: 1055px) { 
 
@@ -297,6 +338,10 @@ section{
 
 .general{
   flex-direction: column;
+}
+
+.general img{
+  display: none;
 }
 
 .generalText{
@@ -414,13 +459,14 @@ section{
 
     width: 120px;
     height: 90px;
-    translate: 0px -70px;
+    translate: -1.1em -70px;
 
   }
 
   header h1{
     text-align: end;
-    margin-right: 1em;
+    margin-right: 0.5em;
+    translate: 0em 0.32em;
   }
 
 
