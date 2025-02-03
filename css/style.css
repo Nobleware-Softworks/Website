@@ -328,6 +328,10 @@ section{
 .portrait{
   width: 300px;
   height: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+  border: double;
+  border-color: var(--hover-color);
 }
 
 .rear{
