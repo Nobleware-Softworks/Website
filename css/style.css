@@ -268,14 +268,6 @@ section{
   text-align: center;
 }
 
-.box:nth-child(2){
-  transition-delay: 200ms;
-}
-
-.box:nth-child(3){
-  transition-delay: 400ms;
-}
-
 
 #container3D canvas {
   width: 100vw !important;
@@ -323,10 +315,28 @@ section{
   display:none;
 }
 
+.mobileBox{
+  padding-bottom: 2em;
+  padding-top: 1em;
+}
+
+.mobileBox h3{
+  color: white;
+}
+
 .runstar{
   padding-left: 5em;
   width: 150px;
   height: auto;
+}
+
+.founder{
+  padding-left: 5em;
+  padding-right: 5em;
+}
+
+.founder p{
+  text-align: justify;
 }
 
 .portrait{
@@ -426,7 +436,7 @@ section{
 .mobileWrap{
   display: flex;
   margin: 2em;
-  margin-top: 5em;
+  margin-top: -5em;
   margin-bottom: -10em;
   padding: 1em 2em;
   flex-direction: column;
