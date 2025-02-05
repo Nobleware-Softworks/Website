@@ -380,6 +380,7 @@ section{
   border-radius: 5px;
 }
 
+
 .container button{
   background-color: #5b5dff;
   color: white;
@@ -391,6 +392,11 @@ section{
   margin-right: 0.5em;
   border: none;
   border-radius: 5px;
+}
+
+.container button:hover{
+  background-color: #6e71ff;
+  cursor: pointer;
 }
 
 .other{

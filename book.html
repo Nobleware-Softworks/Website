@@ -55,7 +55,9 @@ created by Tolga Olcay 2024
 
     <div class="bookContainer">
 
-      <form action="" class = "container">
+      <form action="https://api.web3forms.com/submit" method="POST" class = "container">
+        <input type="hidden" name="access_key" value="714d9239-a54f-443a-acb6-96761f3d82fe">
+
         <h2>Get in touch</h2>
         <p>We will get back to promptly.</p>
 
@@ -69,6 +71,8 @@ created by Tolga Olcay 2024
         <label>Other</label>
         <textarea name="other" placeholder="Other details... (Optional)" class="contact-input other"></textarea>
         
+        <!-- Honeypot Spam Protection -->
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
         <hr> 
 
         <button type="submit">Submit</button>
