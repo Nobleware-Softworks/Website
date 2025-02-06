@@ -26,7 +26,7 @@ body {
 
 .otherpage{
   margin-top: -27em;
-  padding: 3em;
+  padding: 4em;
 }
 
 
@@ -333,12 +333,13 @@ section{
 .founder{
   align-items: center;
   justify-content: center;
-  padding-left: 4%;
-  padding-right: 4%;
+
 }
 
 .founder p{
   text-align: justify;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .portrait{
@@ -603,7 +604,7 @@ section{
   }
 
   .container{
-    width: 90%;
+    width: 92%;
   }
 
 
