@@ -616,7 +616,7 @@ section{
     margin-left: -1em;
   }
 
-@media all and (max-width: 400px){
+@media all and (max-width: 380px){
   .navbar h1{
     font-size: 20px;
   }
