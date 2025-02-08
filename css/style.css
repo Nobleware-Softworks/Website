@@ -29,6 +29,10 @@ body {
   padding: 4em;
 }
 
+.otherpage p{
+  text-align: justify;
+}
+
 
 #drop{
   display: none;
@@ -320,6 +324,10 @@ section{
   padding-top: 1em;
 }
 
+.mobileBox p{
+  text-align: justify;
+}
+
 .mobileBox h3{
   color: white;
 }
@@ -333,13 +341,13 @@ section{
 .founder{
   align-items: center;
   justify-content: center;
+  padding-left: 8%;
+  padding-right: 8%;
 
 }
 
 .founder p{
   text-align: justify;
-  padding-left: 10%;
-  padding-right: 10%;
 }
 
 .portrait{
