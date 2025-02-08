@@ -611,6 +611,10 @@ section{
     translate: 0em 0.32em;
   }
 
+  .otherpage{
+    padding: 2em;
+  }
+
   .container{
     width: 100%;
     margin-left: -1em;
