@@ -33,7 +33,7 @@ body {
 
 .otherpage p{
   text-align: justify;
-  width: 55em;
+  max-width: 55em;
 }
 
 
