@@ -28,10 +28,12 @@ body {
 .otherpage{
   margin-top: -27em;
   padding: 4em;
+  
 }
 
 .otherpage p{
   text-align: justify;
+  width: 55em;
 }
 
 
