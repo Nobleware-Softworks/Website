@@ -341,6 +341,10 @@ section{
   height: auto;
 }
 
+.quote{
+  text-align: justify;
+}
+
 .founder{
   align-items: center;
   justify-content: center;
