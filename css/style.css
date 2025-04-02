@@ -342,6 +342,10 @@ section{
 }
 
 .quote{
+  width: 600px;
+}
+
+.quote2 p{
   text-align: justify;
 }
 
@@ -503,6 +507,10 @@ section{
 .wrapper{
   display:none;
 
+}
+
+.quote{
+  width: 400px;
 }
 
 
