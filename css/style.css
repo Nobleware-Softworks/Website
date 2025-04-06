@@ -337,6 +337,7 @@ section{
 
 .runstar{
   padding-left: 5em;
+  padding-right: 5em;
   width: 150px;
   height: auto;
 }
@@ -464,7 +465,7 @@ section{
 }
 
 
-@media all and (max-width: 1055px) { 
+@media all and (max-width: 1150px) { 
 
 .navbar h1{
   font-size: 30px;
