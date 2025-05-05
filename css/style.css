@@ -335,6 +335,11 @@ section{
   color: white;
 }
 
+.testi{
+  padding-left: 5em;
+  padding-right: 5em; 
+}
+
 .runstar{
   padding-left: 5em;
   padding-right: 5em;
@@ -345,6 +350,8 @@ section{
 
 .quote2 p{
   text-align: justify;
+  padding-left: 2em;
+  padding-right: 2em; 
 }
 
 .founder{
@@ -545,6 +552,11 @@ section{
 
 .testi{
   flex-direction: column;
+}
+
+.testi{
+  padding-left: 0em;
+  padding-right: 0em; 
 }
 
 .mobileTest{
