@@ -6,6 +6,15 @@
   --text-color: #c9c9c9;
 }
 
+@font-face {
+    font-family: 'Copperplate Gothic';
+    src: url('OPTICopperplate-Light.woff2') format('woff2'),
+        url('OPTICopperplate-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 html{
   font-family: Poppins, 'Segoe UI', sans-serif;
   color: var(--text-color);
@@ -128,7 +137,7 @@ header {
 
 header h1{
   filter: drop-shadow(0 0 0px rgb(198, 196, 238)) drop-shadow(0 0 0px rgb(201, 199, 240)) drop-shadow(0 0 10px rgb(201, 198, 240));
-  font-family:Copperplate,Copperplate Gothic Light,fantasy; 
+  font-family:'Copperplate Gothic'; 
   font-weight: 100;
   font-size: 2.5em;
 }
