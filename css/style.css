@@ -8,8 +8,8 @@
 
 @font-face {
     font-family: 'Copperplate Gothic';
-    src: url('OPTICopperplate-Light.woff2') format('woff2'),
-        url('OPTICopperplate-Light.woff') format('woff');
+    src: url('CopperplateGothicBT-Roman.woff2') format('woff2'),
+        url('CopperplateGothicBT-Roman.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
