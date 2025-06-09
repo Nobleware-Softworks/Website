@@ -484,7 +484,7 @@ section{
 @media all and (max-width: 1150px) { 
 
 .navbar h1{
-  font-size: 26px;
+  font-size: 25px;
 }
 
 .navbar{
@@ -577,7 +577,7 @@ section{
 
 @media all and (max-width: 850px) { 
   .navbar h1{
-    font-size: 21px;
+    font-size: 18px;
   }
 
   #drop{
@@ -653,7 +653,7 @@ section{
 
 @media all and (max-width: 380px){
   .navbar h1{
-    font-size: 20px;
+    font-size: 16.5px;
   }
   .temp{
     translate: -1.1em -60px;
