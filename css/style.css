@@ -653,7 +653,7 @@ section{
 
 @media all and (max-width: 380px){
   .navbar h1{
-    font-size: 15.75px;
+    font-size: 15.6px;
   }
   .temp{
     translate: -1.1em -60px;
