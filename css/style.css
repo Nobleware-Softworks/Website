@@ -577,12 +577,13 @@ section{
 
 @media all and (max-width: 850px) { 
   .navbar h1{
-    font-size: 17.75px;
+    font-size: 17.5px;
+    
   }
 
   #drop{
     display: block;
-    translate: 20px 4px;
+    translate: 20px 6px;
     
   }
 
@@ -639,7 +640,7 @@ section{
   header h1{
     text-align: end;
     margin-right: 0.5em;
-    translate: 0em 0.32em;
+    translate: 0em 0.5em;
   }
 
   .otherpage{
