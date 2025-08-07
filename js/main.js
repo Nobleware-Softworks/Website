@@ -63,17 +63,17 @@ camera.position.set( 0, 4, 16 );
 
 
 //Add lights to the scene, so we can actually see the 3D model
-const topLight = new THREE.DirectionalLight(0xD0D4F1, 3.5); // (color, intensity)
+const topLight = new THREE.DirectionalLight(0xB5ACEE, 3.5); // (color, intensity)
 topLight.position.set(200, 50, 700) //top-left-ish
 topLight.castShadow = true;
 scene.add(topLight);
 
-const backLight = new THREE.DirectionalLight(0xD0D4F1, 3.5); // (color, intensity)
+const backLight = new THREE.DirectionalLight(0xB5ACEE, 3.5); // (color, intensity)
 backLight.position.set(200, 50, -700) //top-left-ish
 backLight.castShadow = true;
 scene.add(backLight);
 
-const ambientLight = new THREE.AmbientLight(0x484B6A, objToRender === "dino" ? 4 : 1);
+const ambientLight = new THREE.AmbientLight(0x544C73, objToRender === "dino" ? 4 : 1);
 scene.add(ambientLight);
 
 //This adds controls to the camera, so we can rotate / zoom it with the mouse
