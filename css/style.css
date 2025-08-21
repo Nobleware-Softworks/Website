@@ -556,6 +556,7 @@ section{
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  overflow-x: clip;
   
 }
 
@@ -705,7 +706,7 @@ section{
     background-image: url("../wallpaper2.jpg");
     background-attachment: scroll;
     position: sticky;
-    overflow-x: hidden;
+    
   }
 
   .fixedImg h1{
