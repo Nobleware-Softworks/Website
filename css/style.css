@@ -37,7 +37,10 @@ body {
 .otherpage{
   margin-top: -27em;
   padding: 4em;
-  
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .otherpage p{
@@ -205,21 +208,20 @@ section{
   font-size:large; 
   border: 3px solid #6b758a;
   cursor:pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .generalButtons button:hover{
   background-color: var(--hover-color);
-  
+  transform: scale(1.1);
 }
-
-
 
 
 .wrapper{
   display: flex;
   justify-content: center;
   position: relative;
-  
+  margin-top: 10em;
 }
 
 .box{
@@ -384,14 +386,14 @@ section{
   border-color: var(--hover-color);
 }
 
+
 .container{
   
   display: flex;
   padding: 1em;
   flex-direction: column;
-
   margin-top: 5em;
-  width: 35%;
+  width: 100%;
   background-color: rgb(53, 56, 61);
   border-radius: 15px;
   line-height: 20px;
@@ -485,13 +487,14 @@ section{
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  
 
 }
 
 .quad *{
   margin: 1em;
-  width: 20em;
-  height: 20em;
+  width: 15em;
+  height: 15em;
 }
 
 .card{
@@ -502,6 +505,7 @@ section{
   text-align: center;
   translate: 0em 0em;
   transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: larger;
 }
 
 .card:hover{
@@ -515,10 +519,12 @@ section{
 .card{
   display: flex;
   flex-direction: column;
+  align-items: center;
+  
 }
 
 .card img{
-  width: 80%;
+  width: 75%;
   height: auto;
   filter: grayscale(100%);
   position: absolute;
@@ -538,6 +544,45 @@ section{
   align-items: center;
   justify-content: center;
   
+}
+
+.fixedImg{
+  margin-top: 20em;
+  width:100%;
+  padding: 20em;
+  background-image: url("../wallpaper1.jpg");
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+.fixedImg h1{
+  font-size: xxx-large;
+  text-shadow: 5px 5px 7px rgb(0, 0, 0);
+  
+}
+
+.imgRow{
+  display: flex;
+  flex-direction: row;
+}
+
+.imgColumn{
+  justify-content: start;
+  align-items: center;
+  padding: 3em;
+  display: flex;
+  flex-direction: column;
+}
+
+.imgColumn H2{
+  margin-top: -1.5em;
+  width: 10em;
+  text-shadow: 5px 5px 7px rgb(0, 0, 0);
+  text-align: center;
 }
 
 @media all and (max-width: 1150px) { 
@@ -653,6 +698,32 @@ section{
     translate: 0em 0em;
   }
 
+    .fixedImg{
+    padding:5em;
+    background-image: url("../wallpaper2.jpg");
+  }
+
+  .fixedImg h1{
+    font-size: x-large;
+    padding-bottom: 0.5em;
+  }
+
+  .imgRow{
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .imgColumn h2{
+    font-size: medium;
+    width: 10em;
+  }
+
+  .imgColumn{
+    padding: 1em;
+    
+  }
+
 
 }
 
@@ -665,6 +736,13 @@ section{
 
   .general{
     margin-top: 8em;
+  }
+
+  .wrapper{
+    padding-top: 8em;
+    padding-bottom: 8em;
+    transform: scale(1.1);
+
   }
 }
 
@@ -759,7 +837,7 @@ section{
   .card{
     translate: 0em -11em;
     font-size: 14px;
-    padding: 0.5em;
+    padding: 1.5em;
   }
 
 }
@@ -780,13 +858,20 @@ section{
 
   .quad *{
   margin: 0.3em;
-  width: 7.5em;
-  height: 7.5em;
+  width: 10em;
+  height: 10em;
   
   }
 
   .hand{
     height:30em;
+  }
+
+  .card{
+    translate: 0em -11em;
+    font-size: 14px;
+    padding: 1em;
+    font-size: small;
   }
 
   
