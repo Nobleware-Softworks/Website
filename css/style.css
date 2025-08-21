@@ -696,6 +696,7 @@ section{
 
   .card{
     translate: 0em 0em;
+    font-size: small;
   }
 
   .fixedImg{
@@ -826,8 +827,8 @@ section{
 
   .quad *{
   margin: 0.3em;
-  width: 9em;
-  height: 9em;
+  width: 10em;
+  height: 10em;
   
   }
 
@@ -838,7 +839,7 @@ section{
   .card{
     translate: 0em -11em;
     font-size: 14px;
-    padding: 1.5em;
+    padding: 1em;
   }
 
 }
