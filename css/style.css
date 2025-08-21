@@ -705,6 +705,7 @@ section{
     background-image: url("../wallpaper2.jpg");
     background-attachment: scroll;
     position: sticky;
+    overflow-x: hidden;
   }
 
   .fixedImg h1{
