@@ -698,7 +698,8 @@ section{
     translate: 0em 0em;
   }
 
-    .fixedImg{
+  .fixedImg{
+    display: none;
     padding:5em;
     background-image: url("../wallpaper2.jpg");
   }
