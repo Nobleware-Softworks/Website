@@ -708,7 +708,7 @@ section{
     background-image: url("../wallpaper2.jpg");
     background-attachment: scroll;
     position: sticky;
-    
+    margin-bottom: -15em;
   }
 
   .fixedImg h1{
