@@ -549,14 +549,15 @@ section{
 .fixedImg{
   margin-top: 20em;
   width:100%;
-  padding: 10em;
+  padding-top: 10em;
+  padding-bottom: 10em;
   background-image: url("../wallpaper1.jpg");
   background-attachment: fixed;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  overflow-x: clip;
+  overflow-x: hidden;
   
 }
 
@@ -702,7 +703,8 @@ section{
 
   .fixedImg{
     
-    padding:5em;
+    padding-top:5em;
+    padding-bottom: 5em;
     background-image: url("../wallpaper2.jpg");
     background-attachment: scroll;
     position: sticky;
