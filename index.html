@@ -4,7 +4,7 @@ created by Tolga Olcay 2024
 -->
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
     <meta name = "theme-color" content="#08080c">
@@ -15,12 +15,19 @@ created by Tolga Olcay 2024
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
-
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.129.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.129.0/examples/jsm/"
+      }
+    }
+    </script>
     
     <script type="module" src="js/script.js"></script>
     <script defer type="module" src="js/main.js"></script>
     <link rel="stylesheet" href="css/style.css" />
-  </head>
+</head>
 
   <body>
 
