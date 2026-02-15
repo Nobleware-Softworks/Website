@@ -39,7 +39,7 @@ if (container) {
   container.appendChild(renderer.domElement);
 }
 
-// Add lights - exact same as original
+// Add lights 
 const topLight = new THREE.DirectionalLight(0xB5ACEE, 3.5);
 topLight.position.set(200, 50, 700);
 topLight.castShadow = true;
@@ -58,7 +58,7 @@ const controls = new OrbitControls(camera, renderer.domElement);
 controls.enablePan = false;
 controls.enableZoom = false;
 controls.autoRotate = true;
-controls.autoRotateSpeed = 2.0; // Default is 2.0, increase for faster rotation
+controls.autoRotateSpeed = 3.0; // Default is 2.0, increase for faster rotation
 controls.enableDamping = true;
 
 // Load GLTF model
