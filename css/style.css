@@ -359,7 +359,7 @@ section{
   display: flex;
   gap: 20px;
   padding: 1em 2em;
-  animation: carousel-slide 60s linear infinite;
+  animation: carousel-slide 120s linear infinite;
   width: max-content;
 }
 
