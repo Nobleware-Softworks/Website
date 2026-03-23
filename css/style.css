@@ -45,8 +45,9 @@ body {
 
 .indexBook{
   margin-top: -10em;
-  padding-left: 30em;
-  padding-right: 30em;
+  padding-left: 30%;
+  padding-right: 30%;
+  
   transform-origin: center center;
   align-self: center;
   align-content: center;
@@ -481,7 +482,7 @@ section{
 
 
 .container{
-  
+  border: 1px solid rgba(164, 172, 255, 0.12);
   display: flex;
   padding: 1em;
   flex-direction: column;
