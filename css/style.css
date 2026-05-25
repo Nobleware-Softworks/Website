@@ -989,6 +989,10 @@ section{
     translate: 0em -25px;
   }
 
+  .generalText h3{
+    font-size: 1.5em;
+  }
+
   #list{
     display: none;
   }
