@@ -1,0 +1,457 @@
+<!--
+NOBLEWARE SOFTWORKS WEBSITE
+created by Tolga Olcay 2024
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta name="theme-color" content="#08080c">
+
+    <title>Privacy Policy — Nobleware Softworks</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <script type="module" src="js/script.js"></script>
+    <script defer type="module" src="js/main.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      /* ── Privacy Policy page styles ── */
+
+      .pp-hero {
+        text-align: center;
+        padding-top: 2em;
+        padding-bottom: 2em;
+      }
+
+      .pp-hero h1 {
+        font-size: clamp(2rem, 5vw, 3rem);
+        color: #ffffff;
+        margin-bottom: 0.3em;
+      }
+
+      .pp-hero .pp-updated {
+        font-size: 0.8em;
+        color: #6b758a;
+        margin: 0;
+        text-align: center;
+      }
+
+      .pp-divider {
+        width: 48px;
+        height: 2px;
+        background: #5b5dff;
+        margin: 0.75em auto 1.5em;
+        border: none;
+      }
+
+      /* ── Two-column layout ── */
+      .pp-body {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: 3em;
+        max-width: 860px;
+        margin: 0 auto;
+        align-items: start;
+      }
+
+      /* ── Sidebar TOC ── */
+      .pp-toc {
+        position: sticky;
+        top: 7em;
+        border-left: 2px solid rgba(164, 172, 255, 0.15);
+        padding-left: 1em;
+      }
+
+      .pp-toc-title {
+        font-size: 0.7em;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: #ffffff;
+        margin-bottom: 0.85em;
+      }
+
+      .pp-toc ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .pp-toc a {
+        display: block;
+        font-size: 0.78em;
+        color: #6b758a;
+        text-decoration: none;
+        padding: 0.35em 0;
+        border-left: 2px solid transparent;
+        margin-left: -1.05em;
+        padding-left: 1em;
+        transition: color 150ms ease, border-color 150ms ease;
+        line-height: 1.4;
+      }
+
+      .pp-toc a:hover {
+        color: #a4acff;
+        border-left-color: #5b5dff;
+      }
+
+      /* ── Content ── */
+      .pp-content {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .pp-section {
+        padding-bottom: 2.5em;
+        margin-bottom: 2.5em;
+        border-bottom: 1px solid rgba(164, 172, 255, 0.1);
+      }
+
+      .pp-section:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+
+      .pp-section h2 {
+        font-size: 1.1em;
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 0.85em;
+      }
+
+      .pp-section p {
+        font-size: 0.9em;
+        line-height: 1.85;
+        color: #c9c9c9;
+        text-align: justify;
+        max-width: none;
+        margin-bottom: 0.85em;
+      }
+
+      .pp-section p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── Bullet list ── */
+      .pp-list {
+        list-style: none;
+        padding: 0;
+        margin: 0.75em 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.6em;
+      }
+
+      .pp-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75em;
+        font-size: 0.9em;
+        color: #c9c9c9;
+        line-height: 1.7;
+      }
+
+      .pp-dot {
+        flex-shrink: 0;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #5b5dff;
+        margin-top: 0.55em;
+      }
+
+      /* ── Contact block ── */
+      .pp-contact-block {
+        margin-top: 1.25em;
+        background: #1e1e2e;
+        border: 1px solid rgba(164, 172, 255, 0.12);
+        border-radius: 10px;
+        padding: 1.25em 1.5em;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75em;
+      }
+
+      .pp-contact-row {
+        display: flex;
+        align-items: baseline;
+        gap: 1em;
+        font-size: 0.88em;
+        color: #c9c9c9;
+      }
+
+      .pp-contact-label {
+        font-size: 0.7em;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #a4acff;
+        min-width: 65px;
+        flex-shrink: 0;
+      }
+
+      .pp-contact-block a {
+        color: #c9c9c9;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        transition: color 150ms ease;
+      }
+
+      .pp-contact-block a:hover {
+        color: #a4acff;
+      }
+
+      /* ── PIPEDA note ── */
+      .pp-pipeda {
+        background: #1e1e2e;
+        border: 1px solid rgba(164, 172, 255, 0.12);
+        border-left: 3px solid #5b5dff;
+        border-radius: 5px;
+        padding: 1.1em 1.4em;
+        margin-top: 1em;
+      }
+
+      .pp-pipeda p {
+        font-size: 0.82em !important;
+        color: #6b758a !important;
+        text-align: left !important;
+        margin: 0 !important;
+      }
+
+      .pp-pipeda em {
+        color: #c9c9c9;
+        font-style: italic;
+      }
+
+      /* ── Responsive ── */
+      @media (max-width: 850px) {
+        .pp-body {
+          grid-template-columns: 1fr;
+          gap: 2em;
+        }
+
+        .pp-toc {
+          position: static;
+          background: #1e1e2e;
+          border: 1px solid rgba(164, 172, 255, 0.12);
+          border-left: none;
+          border-radius: 10px;
+          padding: 1.25em 1.5em;
+        }
+
+        .pp-toc a {
+          border-left: none;
+          margin-left: 0;
+          padding-left: 0;
+        }
+
+        .pp-toc a:hover {
+          border-left: none;
+          color: #a4acff;
+        }
+
+        .pp-contact-row {
+          flex-direction: column;
+          gap: 0.15em;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <!-- ── Navbar (matches all other pages) ── -->
+    <div class="navbar">
+      <header>
+        <h1>Nobleware Softworks</h1>
+      </header>
+      <div class="temp">
+        <button id="drop"><img src='logo1.png'></button>
+        <ul id="list">
+          <li class="home-li"><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a class="accent-link" href="book.html">Book Now</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ── Page content ── -->
+    <div class="otherpage">
+      <div style="width: 100%; max-width: 860px;">
+
+        <!-- Hero -->
+        <div class="pp-hero">
+          <h1>Privacy Policy</h1>
+          <hr class="pp-divider">
+          <p class="pp-updated">Last updated: May 2025</p>
+        </div>
+
+        <!-- Two-column body -->
+        <div class="pp-body">
+
+          <!-- Sidebar TOC -->
+          <aside class="pp-toc">
+            <p class="pp-toc-title">Contents</p>
+            <ul>
+              <li><a href="#intro">1. Introduction</a></li>
+              <li><a href="#collection">2. Information We Collect</a></li>
+              <li><a href="#use">3. How We Use Your Information</a></li>
+              <li><a href="#sharing">4. Disclosure</a></li>
+              <li><a href="#retention">5. Data Retention</a></li>
+              <li><a href="#security">6. Security</a></li>
+              <li><a href="#rights">7. Your Rights</a></li>
+              <li><a href="#minors">8. Children's Privacy</a></li>
+              <li><a href="#contact">9. Contact Us</a></li>
+              <li><a href="#changes">10. Changes to This Policy</a></li>
+            </ul>
+          </aside>
+
+          <!-- Main content -->
+          <div class="pp-content">
+
+            <div class="pp-section" id="intro">
+              <h2>1. Introduction</h2>
+              <p>Nobleware Softworks ("we", "us", or "our") is committed to protecting the privacy of individuals who interact with our website and services. This Privacy Policy explains how we collect, use, disclose, and safeguard your personal information in accordance with the <em>Personal Information Protection and Electronic Documents Act</em> (PIPEDA) and applicable British Columbia privacy legislation.</p>
+              <p>By using our website or submitting our contact form, you consent to the practices described in this policy.</p>
+            </div>
+
+            <div class="pp-section" id="collection">
+              <h2>2. Information We Collect</h2>
+              <p>We collect personal information only when you voluntarily provide it through our booking and contact form. The information collected is limited to:</p>
+              <ul class="pp-list">
+                <li><span class="pp-dot"></span>Full name</li>
+                <li><span class="pp-dot"></span>Email address</li>
+                <li><span class="pp-dot"></span>Phone number</li>
+                <li><span class="pp-dot"></span>Any additional details you choose to include in the optional "Other" field</li>
+              </ul>
+              <p>We do not use tracking cookies, run analytics tools that collect personal data, or gather any information passively beyond standard web server logs (such as IP address and browser type), which are not used to identify individuals.</p>
+            </div>
+
+            <div class="pp-section" id="use">
+              <h2>3. How We Use Your Information</h2>
+              <p>The personal information you provide is used solely for the purpose of responding to your consultation request and establishing communications regarding our software development, SEO, and web development services. Specifically, we use your information to:</p>
+              <ul class="pp-list">
+                <li><span class="pp-dot"></span>Respond to your inquiry and schedule a free consultation</li>
+                <li><span class="pp-dot"></span>Discuss your business needs and proposed solutions</li>
+                <li><span class="pp-dot"></span>Follow up on services or projects discussed</li>
+                <li><span class="pp-dot"></span>Communicate project details relevant to your engagement with us</li>
+              </ul>
+              <p>We will never use your information to send unsolicited marketing emails, newsletters, or promotional materials without your explicit consent.</p>
+            </div>
+
+            <div class="pp-section" id="sharing">
+              <h2>4. Disclosure of Your Information</h2>
+              <p>We do not sell, trade, rent, or otherwise transfer your personal information to third parties. Your information is not shared with advertisers, data brokers, or any other commercial entities.</p>
+              <p>Your form submissions are processed through Web3Forms, a third-party form handling service that transmits your message directly to our business email inbox. Web3Forms acts solely as a conduit for delivery and does not store or use your personal data beyond facilitating that transmission.</p>
+              <p>We may disclose your information only if required to do so by law or in response to valid legal process, such as a court order or government request.</p>
+            </div>
+
+            <div class="pp-section" id="retention">
+              <h2>5. Data Retention</h2>
+              <p>We retain your personal information only for as long as necessary to fulfill the purpose for which it was collected — typically the duration of our business relationship or project discussion. Email correspondence containing your personal information is managed in accordance with standard business record-keeping practices.</p>
+              <p>You may request deletion of your personal information at any time by contacting us (see Section 9).</p>
+            </div>
+
+            <div class="pp-section" id="security">
+              <h2>6. Security</h2>
+              <p>We take reasonable precautions to protect your personal information from unauthorized access, use, or disclosure. Our contact form uses HTTPS encryption for data transmission, and access to our email systems is restricted to authorized personnel only.</p>
+              <p>No method of transmission over the internet is 100% secure. While we strive to protect your personal information, we cannot guarantee absolute security.</p>
+            </div>
+
+            <div class="pp-section" id="rights">
+              <h2>7. Your Rights Under PIPEDA</h2>
+              <p>As a Canadian resident, you have the right to:</p>
+              <ul class="pp-list">
+                <li><span class="pp-dot"></span>Know what personal information we hold about you</li>
+                <li><span class="pp-dot"></span>Request access to your personal information</li>
+                <li><span class="pp-dot"></span>Request correction of inaccurate or incomplete information</li>
+                <li><span class="pp-dot"></span>Withdraw consent for the use of your personal information (subject to legal and contractual restrictions)</li>
+                <li><span class="pp-dot"></span>Request deletion of your personal information</li>
+                <li><span class="pp-dot"></span>File a complaint with the Office of the Privacy Commissioner of Canada if you believe your privacy rights have been violated</li>
+              </ul>
+              <p>To exercise any of these rights, please contact us using the details in Section 9.</p>
+            </div>
+
+            <div class="pp-section" id="minors">
+              <h2>8. Children's Privacy</h2>
+              <p>Our website and services are directed at businesses and are not intended for individuals under the age of 18. We do not knowingly collect personal information from minors. If you believe a minor has submitted personal information to us, please contact us immediately so we can take appropriate action.</p>
+            </div>
+
+            <div class="pp-section" id="contact">
+              <h2>9. Contact Us</h2>
+              <p>If you have questions, concerns, or requests regarding this Privacy Policy or the handling of your personal information, please contact us:</p>
+              <div class="pp-contact-block">
+                <div class="pp-contact-row">
+                  <span class="pp-contact-label">Company</span>
+                  Nobleware Softworks
+                </div>
+                <div class="pp-contact-row">
+                  <span class="pp-contact-label">Email</span>
+                  <a href="mailto:info@noblewaresoftworks.com">info@noblewaresoftworks.com</a>
+                </div>
+                <div class="pp-contact-row">
+                  <span class="pp-contact-label">Phone</span>
+                  <a href="tel:6043090249">(604) 309-0249</a>
+                </div>
+                <div class="pp-contact-row">
+                  <span class="pp-contact-label">Location</span>
+                  White Rock, British Columbia, Canada
+                </div>
+              </div>
+            </div>
+
+            <div class="pp-section" id="changes">
+              <h2>10. Changes to This Policy</h2>
+              <p>We may update this Privacy Policy from time to time to reflect changes in our practices or applicable law. The "Last Updated" date at the top of this page will be revised accordingly. We encourage you to review this policy periodically. Continued use of our website after any changes constitutes your acceptance of the updated policy.</p>
+            </div>
+
+            <div class="pp-pipeda">
+              <p>This policy has been prepared in accordance with Canada's <em>Personal Information Protection and Electronic Documents Act</em> (PIPEDA, S.C. 2000, c. 5) and the <em>Personal Information Protection Act</em> (PIPA, SBC 2003, c. 63) as applicable to businesses operating in British Columbia.</p>
+            </div>
+
+          </div><!-- /.pp-content -->
+        </div><!-- /.pp-body -->
+
+      </div>
+      <br><br><br>
+    </div>
+
+  </body>
+
+  <!-- ── Footer (matches all other pages) ── -->
+  <footer>
+    <div class="rear">
+      <h2>Nobleware Softworks</h2>
+      <h3>Pages</h3>
+      <p>Learn more about how our services help businesses in the lower mainland</p>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="book.html">Book Now</a></li>
+      </ul>
+      <hr>
+      <h3>Contact</h3>
+      <p>Contact us to schedule a free consultation</p>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/tolga-olcay-81aa63274/"><img src="LinkedIn.png"></a></li>
+        <li><a href="tel:604-309-0249">(604)-309-0249</a></li>
+        <li><a href="mailto:info@noblewaresoftworks.com?subject=Hello%20there&body=I%20wanted%20to%20reach%20out%20to%20you.">info@noblewaresoftworks.com</a></li>
+      </ul>
+      <br>
+      <p>Nobleware Softworks&nbsp;&nbsp;|&nbsp;&nbsp;All Rights Reserved. (2025)&nbsp;&nbsp;|&nbsp;&nbsp;<a href="privacy-policy.html" style="color: #a4acff; text-decoration: underline; text-underline-offset: 3px;">Privacy Policy</a></p>
+    </div>
+  </footer>
+
+</html>

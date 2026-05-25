@@ -28,6 +28,7 @@ created by Tolga Olcay 2024
     <script defer type="module" src="js/main.js"></script>
     <link rel="stylesheet" href="css/style.css" />
 </head>
+</head>
 
   <body>
 
@@ -205,23 +206,52 @@ created by Tolga Olcay 2024
 
     </div>
 
-    <section>
-      <br><br>
-      <div class="fixedImg">
-        <h1>What we can <span style="color: #5b5dff;">help</span> you with</h1>
-        <div class="imgRow">
-          <div class="imgColumn"><h1>100's</h1><h2>of hours saved on paperwork and productivity</h2></div>
-          <div class="imgColumn"><h1>50%</h1><h2>increase in effciency and administration</h2></div>
-          <div class="imgColumn"><h1>4x</h1><h2>Growth in online web presance</h2></div>
-          <div class="imgColumn"><h1>$</h1><h2>Building Solutions that bring value to your company</h2></div>
-          
-        </div>
-              <div class ="generalButtons">
-              <button onclick="location.href='services.html'" style="color: #ffd255; background-color: #5b5eff00; font-size:x-large; border: 5px solid #ffd255; text-shadow: 7px 7px 7px rgb(0, 0, 0); box-shadow: 5px 5px 7px rgb(0, 0, 0); margin-left: -1.1em;">Explore Solutions</button>
+    <!-- ── Parallax CTA ── -->
+    <section class="pcta" id="pcta" aria-label="Statistics and call to action">
+      <div class="pcta__bg" id="pctaBg" aria-hidden="true"></div>
+      <div class="pcta__overlay" aria-hidden="true"></div>
+      <div class="pcta__stripe"  aria-hidden="true"></div>
+
+      <div class="pcta__content">
+
+        <!-- Stats -->
+        <div class="pcta__stats-block">
+          <span class="pcta__eyebrow">By The Numbers</span>
+          <div class="pcta__stats-row">
+            <div class="pcta__stat-item">
+              <span class="pcta__stat-number" data-target="100" data-suffix="+" data-prefix="" data-label="Hours Saved on Paperwork">0</span>
+              <span class="pcta__stat-suffix-inline">+</span>
+              <span class="pcta__stat-label">Hours Saved on Paperwork</span>
             </div>
-      
+            <div class="pcta__stat-item">
+              <span class="pcta__stat-number" data-target="50" data-suffix="%" data-label="Increase in Efficiency">0</span>
+              <span class="pcta__stat-suffix-inline">%</span>
+              <span class="pcta__stat-label">Increase in Efficiency</span>
+            </div>
+            <div class="pcta__stat-item">
+              <span class="pcta__stat-number" data-target="4" data-suffix="x" data-label="Growth in Web Presence">0</span>
+              <span class="pcta__stat-suffix-inline">x</span>
+              <span class="pcta__stat-label">Growth in Web Presence</span>
+            </div>
+            <div class="pcta__stat-item">
+              <span class="pcta__stat-number" data-target="5.0" data-suffix="★" data-label="Google Rating">0.0</span>
+              <span class="pcta__stat-suffix-inline">★</span>
+              <span class="pcta__stat-label">Google Rating</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pcta__divider" aria-hidden="true"></div>
+
+        <!-- CTA -->
+        <div class="pcta__cta-block">
+          <span class="pcta__eyebrow">Ready to Start?</span>
+          <h2 class="pcta__title">Transform Your Business <strong>Today</strong></h2>
+          <p class="pcta__text">Book a free consultation and let us engineer a solution that fits your goals — from custom software to SEO and web development.</p>
+          <a href="book.html" class="pcta__btn">Book a Free Consultation &#10148;</a>
+        </div>
+
       </div>
-      <br><br>
     </section>
 
     <section class="hidden mobileTest">
@@ -353,7 +383,78 @@ created by Tolga Olcay 2024
 
     <br><br><br><br><br><br><br>
     
-  </body>
+  <script>
+    /* ── Parallax scroll ── */
+    (function () {
+      const section = document.getElementById('pcta');
+      const bg      = document.getElementById('pctaBg');
+      if (!section || !bg) return;
+
+      function update() {
+        const rect = section.getBoundingClientRect();
+        bg.style.transform = 'translateY(' + (rect.top * 0.25) + 'px)';
+      }
+
+      if (window.innerWidth >= 768) {
+        update();
+        window.addEventListener('scroll', update, { passive: true });
+      }
+    })();
+
+    /* ── Count-up on intersection ── */
+    (function () {
+      const section = document.getElementById('pcta');
+      const numbers = document.querySelectorAll('.pcta__stat-number');
+      if (!section || !numbers.length) return;
+
+      function easeOutExpo(t) {
+        return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
+      }
+
+      function animateAll() {
+        numbers.forEach(function (el) {
+          const raw      = el.getAttribute('data-target');
+          const target   = parseFloat(raw);
+          const decimals = (raw.split('.')[1] || '').length;
+          const suffix   = el.getAttribute('data-suffix') || '';
+          const duration = 1400;
+          let start      = null;
+
+          function step(ts) {
+            if (!start) start = ts;
+            const progress = Math.min((ts - start) / duration, 1);
+            const value    = (easeOutExpo(progress) * target).toFixed(decimals);
+            el.textContent = value + suffix;
+            if (progress < 1) requestAnimationFrame(step);
+          }
+
+          requestAnimationFrame(step);
+        });
+      }
+
+      function resetAll() {
+        numbers.forEach(function (el) {
+          const raw      = el.getAttribute('data-target');
+          const decimals = (raw.split('.')[1] || '').length;
+          const suffix   = el.getAttribute('data-suffix') || '';
+          el.textContent = (0).toFixed(decimals) + suffix;
+        });
+      }
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            animateAll();
+          } else {
+            resetAll();
+          }
+        });
+      }, { threshold: 0.2 });
+
+      observer.observe(section);
+    })();
+  </script>
+</body>
 
   <footer>
 
@@ -377,7 +478,8 @@ created by Tolga Olcay 2024
     </ul>
 
     <br>
-    <p>Nobleware Softworks<br>All Rights Reserved. (2025)</p>
+    <!-- new -->
+    <p>Nobleware Softworks&nbsp;&nbsp;|&nbsp;&nbsp;All Rights Reserved. (2025)&nbsp;&nbsp;|&nbsp;&nbsp;<a href="privacy-policy.html" style="color: #a4acff; text-decoration: underline; text-underline-offset: 3px;">Privacy Policy</a></p>
     
     
     </div>

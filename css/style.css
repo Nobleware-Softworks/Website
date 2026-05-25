@@ -59,7 +59,6 @@ body {
   max-width: 55em;
 }
 
-
 #drop{
   display: none;
 
@@ -102,7 +101,6 @@ body {
   
 
 }
-
 
 .navbar a{
   display: flex;
@@ -156,7 +154,6 @@ header h1{
   font-size: 2.15em;
 }
 
-
 section{
   display: grid;
   place-items: center;
@@ -172,7 +169,6 @@ section{
   border-color: var(--hover-color);
   padding-bottom: 4em;
   translate: 0em 9em;
-
 
 }
 
@@ -203,6 +199,9 @@ section{
   margin-left: 2em;
 }
 
+.generalText h3{
+  
+}
 
 .generalButtons{
   display: flex;
@@ -226,7 +225,6 @@ section{
   background-color: var(--hover-color);
   transform: scale(1.1);
 }
-
 
 .wrapper{
   display: flex;
@@ -313,7 +311,6 @@ section{
   border-bottom: 1px solid rgba(164,172,255,0.15);
 }
 
-
 #container3D canvas {
   width: 100vw !important;
   height: 100vh !important;
@@ -324,7 +321,6 @@ section{
   translate: -50% -50%;
   z-index:0;
 }
-
 
 .hidden{
   opacity: 0;
@@ -451,7 +447,6 @@ section{
   height: auto;
 }
 
-
 .quote2 p{
   text-align: justify;
   padding-left: 2em;
@@ -478,7 +473,6 @@ section{
   border: double;
   border-color: var(--hover-color);
 }
-
 
 .container{
   border: 1px solid rgba(164, 172, 255, 0.12);
@@ -509,7 +503,6 @@ section{
   border: none;
   border-radius: 5px;
 }
-
 
 .container button{
   background-color: #5b5dff;
@@ -565,7 +558,6 @@ section{
   padding:0.5em;
 }
 
-
 .rear a{
   color: var(--text-color);
 
@@ -580,7 +572,8 @@ section{
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  
+  height: 22em;
+  margin-top: 14em;
 
 }
 
@@ -632,52 +625,166 @@ section{
   translate: 0em 14em;
   width: 100%;
   height:55em;
-  margin-bottom: 5em;
   background: center/cover url("../hand3.png") no-repeat;
   align-items: center;
   justify-content: center;
   
 }
 
-.fixedImg{
-  margin-top: 20em;
-  width:100%;
-  padding-top: 10em;
-  padding-bottom: 10em;
-  background-image: url("../wallpaper1.jpg");
-  background-attachment: fixed;
+/* ── Parallax CTA ── */
+.pcta {
+  margin-top:20em;
+  position: relative;
+  width: 100%;
+  min-height: 38rem;
   display: flex;
   align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  overflow-x: hidden;
+  overflow: hidden;
   
 }
 
-.fixedImg h1{
-  font-size: xxx-large;
-  text-shadow: 5px 5px 7px rgb(0, 0, 0);
-  
+.pcta__bg {
+  position: absolute;
+  top: -50%;
+  left: 0; right: 0;
+  height: 200%;
+  background-image: url('../wallpaper1.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%) contrast(1.15) brightness(0.6);
+  will-change: transform;
+  z-index: 0;
 }
 
-.imgRow{
-  display: flex;
-  flex-direction: row;
+.pcta__overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(8,8,12,0.5) 0%, rgba(8,8,12,0.82) 100%);
+  z-index: 1;
 }
 
-.imgColumn{
-  justify-content: start;
-  align-items: center;
-  padding: 3em;
+.pcta__stripe {
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 4px;
+  background: #5b5dff;
+  z-index: 2;
+}
+
+.pcta__content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 6rem 2.5rem;
   display: flex;
   flex-direction: column;
+  gap: 3rem;
 }
 
-.imgColumn H2{
-  margin-top: -1.5em;
-  width: 10em;
-  text-shadow: 5px 5px 7px rgb(0, 0, 0);
-  text-align: center;
+.pcta__eyebrow {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #a4acff;
+  margin-bottom: 1.25rem;
+}
+
+.pcta__stats-block { display: flex; flex-direction: column; }
+
+.pcta__stats-row {
+  display: flex;
+  align-items: center;
+}
+
+.pcta__stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  padding-right: 2.5rem;
+}
+
+.pcta__stat-item + .pcta__stat-item {
+  border-left: 1px solid rgba(255,255,255,0.12);
+  padding-left: 2.5rem;
+  padding-right: 0;
+}
+
+.pcta__stat-number {
+  
+  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.pcta__stat-suffix-inline { display: none; }
+
+.pcta__stat-label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(201,201,201,0.6);
+  margin-top: 0.4rem;
+}
+
+.pcta__divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(255,255,255,0.1);
+}
+
+.pcta__cta-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 36rem;
+}
+
+.pcta__title {
+  
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 300;
+  color: #ffffff;
+  margin: 0 0 1.1rem;
+  line-height: 1.15;
+}
+
+.pcta__title strong { font-weight: 700; }
+
+.pcta__text {
+  font-size: 0.95rem;
+  color: rgba(201,201,201,0.85);
+  margin: 0 0 2rem;
+  line-height: 1.75;
+  max-width: none;
+  text-align: left;
+}
+
+.pcta__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.85em 1.75em;
+  background: #5b5dff;
+  color: #ffffff;
+  font-family: Poppins, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 200ms ease, transform 200ms ease;
+}
+
+.pcta__btn:hover {
+  background: #6e71ff;
+  transform: scale(1.04);
 }
 
 @media all and (max-width: 1150px) { 
@@ -709,8 +816,6 @@ section{
   margin-left: 0em;
 }
 
-
-
 .box{
   width: 90%;
   height:25em;
@@ -726,7 +831,6 @@ section{
   padding: 1.25em;
   font-size: 0.85em;
 }
-
 
 .mobileWrap{
   display: flex;
@@ -784,52 +888,42 @@ section{
 .quad *{
   margin: 0.5em;
   width: 10em;
-  height: 10em;
+  
 }
 
   .hand{
     height:40em;
     translate: 0em 20em;
+    
   }
 
-  
+  .pcta__content {
+    padding: 4rem 1.5rem;
+    gap: 2rem;
+  }
+
+  .pcta__stats-row {
+    flex-wrap: wrap;
+    gap: 1.75rem;
+  }
+
+  .pcta__stat-item,
+  .pcta__stat-item + .pcta__stat-item {
+    flex: 1 1 40%;
+    border-left: none;
+    padding: 0;
+  }
+
+  .pcta{
+    margin-bottom: -22em;
+  }
 
   .card{
     translate: 0em 0em;
     font-size: small;
   }
 
-  .fixedImg{
-    
-    padding-top:5em;
-    padding-bottom: 5em;
-    background-image: url("../wallpaper2.jpg");
-    background-attachment: scroll;
-    position: sticky;
-    margin-bottom: -15em;
-  }
-
-  .fixedImg h1{
-    font-size: x-large;
-    padding-bottom: 0.5em;
-  }
-
-  .imgRow{
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .imgColumn h2{
-    font-size: medium;
-    width: 10em;
-  }
-
-  .imgColumn{
-    padding: 1em;
-    
-  }
-
+  
 
 }
 
@@ -856,13 +950,11 @@ section{
 @media all and (max-width: 850px) { 
   .navbar h1{
     font-size: 17.5px;
-    
   }
 
   #drop{
     display: block;
     translate: 20px 6px;
-    
   }
 
   .navbar a.accent-link{
@@ -872,16 +964,16 @@ section{
   .navbar a.accent-link:hover{
     background-color: var(--hover-color);
   }
+
   .navbar a.active-link{
     border-bottom: none;
-    
-    
   } 
+
   .home-li{
     margin-left: 0px;
     width: 200px;
-    
   }
+
   .navbar a{
     padding: 10px;
     border: solid 1px var(--hover-color);
@@ -889,7 +981,6 @@ section{
     width: 200px;
     translate: -3em;
   }
-
 
   .navbar ul{
     flex-direction: column;
@@ -907,12 +998,9 @@ section{
   }
 
   .temp{
-    translate: 0em 0px;
-
     width: 120px;
     height: 90px;
     translate: -1.1em -70px;
-
   }
 
   header h1{
@@ -937,14 +1025,18 @@ section{
   }
 
   .quad *{
-  margin: 0.3em;
-  width: 10em;
-  height: 10em;
-  
+    margin: 0.3em;
+    width: 10em;
+    height: 10em;
   }
 
   .hand{
     height:30em;
+  }
+
+  .pcta__bg {
+    top: 0;
+    height: 100%;
   }
 
   .card{
@@ -960,6 +1052,7 @@ section{
   .navbar h1{
     font-size: 15.75px;
   }
+
   .temp{
     translate: -1.1em -60px;
   }
@@ -971,14 +1064,14 @@ section{
   }
 
   .quad *{
-  margin: 0.3em;
-  width: 10em;
-  height: 10em;
-  
+    margin: 0.3em;
+    width: 10em;
+    height: 10em;
   }
 
   .hand{
     height:30em;
+    
   }
 
   .card{
@@ -988,5 +1081,4 @@ section{
     font-size: small;
   }
 
-  
 }
