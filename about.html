@@ -7,105 +7,289 @@ created by Tolga Olcay 2024
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
-    <meta name = "theme-color" content="#08080c">
-    
-    <title>Nobleware Softworks</title>
+    <meta name="theme-color" content="#08080c">
+    <meta name="description" content="Learn about Nobleware Softworks — a White Rock-based software company serving Vancouver and the Lower Mainland with custom app development, SEO, and web development." />
+    <title>About — Nobleware Softworks</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
-
-    
     <script type="module" src="js/script.js"></script>
     <script defer type="module" src="js/main.js"></script>
     <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      /* ── Scroll reveal ── */
+      .fade-up {
+        opacity: 0;
+        transform: translateY(2rem);
+        transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1),
+                    transform 0.7s cubic-bezier(0.22,1,0.36,1);
+      }
+      .fade-up.visible { opacity: 1; transform: translateY(0); }
+      .fade-up.delay-1 { transition-delay: 0.12s; }
+      .fade-up.delay-2 { transition-delay: 0.22s; }
+
+      /* ── Hero ── */
+      .pg-hero {
+        width: 100%;
+        max-width: 760px;
+        padding-bottom: 2.5em;
+        border-bottom: 1px solid rgba(164,172,255,0.1);
+        margin-bottom: 3em;
+      }
+      .pg-eyebrow {
+        display: block;
+        font-size: 0.7em;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #a4acff;
+        margin-bottom: 0.5em;
+      }
+      .pg-hero h1 {
+        font-size: clamp(2rem, 5vw, 2.8rem);
+        color: #ffffff;
+        margin: 0 0 0.4em;
+        font-family: Poppins, sans-serif;
+        font-weight: 700;
+      }
+      .pg-divider {
+        width: 48px; height: 2px;
+        background: #5b5dff;
+        margin: 0.75em 0 1em;
+        border: none;
+      }
+      .pg-hero p {
+        max-width: 52em;
+        text-align: left;
+        color: #6b758a;
+        font-size: 0.95em;
+        line-height: 1.8;
+        margin: 0;
+      }
+
+      /* ── Section label ── */
+      .sec-label {
+        font-size: 0.7em;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #a4acff;
+        margin-bottom: 0.4em;
+        display: block;
+      }
+
+      /* ── About body ── */
+      .about-body {
+        width: 100%;
+        max-width: 760px;
+        margin-bottom: 4em;
+      }
+      .about-body h2 {
+        font-size: 1.4em;
+        color: #ffffff;
+        font-weight: 700;
+        margin: 0 0 0.75em;
+        font-family: Poppins, sans-serif;
+      }
+      .about-body p {
+        text-align: justify;
+        color: #c9c9c9;
+        font-size: 0.92em;
+        line-height: 1.85;
+        margin-bottom: 1em;
+        max-width: none;
+      }
+
+      /* ── Founder ── */
+      .founder-section {
+        width: 100%;
+        max-width: 760px;
+        padding-top: 3em;
+        border-top: 1px solid rgba(164,172,255,0.1);
+        margin-bottom: 4em;
+      }
+      .founder-layout {
+        display: flex;
+        align-items: flex-start;
+        gap: 2.5em;
+        margin-top: 1.5em;
+      }
+      .founder-layout__img {
+        width: 220px;
+        flex-shrink: 0;
+        display: block;
+      }
+      .founder-layout__text {}
+      .founder-layout__name {
+        font-size: 1.45em;
+        font-weight: 700;
+        color: #ffffff;
+        margin: 0 0 0.1em;
+        font-family: Poppins, sans-serif;
+      }
+      .founder-layout__title {
+        display: block;
+        font-size: 0.78em;
+        color: #6b758a;
+        margin-bottom: 1em;
+        letter-spacing: 0.05em;
+      }
+      .founder-layout__bio {
+        font-size: 0.9em;
+        color: #c9c9c9;
+        line-height: 1.85;
+        text-align: justify;
+        max-width: none;
+      }
+
+      /* ── Pills ── */
+      .pills-section {
+        width: 100%;
+        max-width: 760px;
+        padding-top: 3em;
+        border-top: 1px solid rgba(164,172,255,0.1);
+        margin-bottom: 1em;
+      }
+      .pills-section h2 {
+        font-size: 1.2em;
+        color: #ffffff;
+        font-weight: 700;
+        margin-bottom: 1em;
+        font-family: Poppins, sans-serif;
+      }
+      .pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6em;
+      }
+      .pill {
+        font-size: 0.78em;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        padding: 0.4em 1em;
+        border-radius: 100px;
+        border: 1px solid rgba(164,172,255,0.2);
+        color: #a4acff;
+        background: rgba(164,172,255,0.05);
+        transition: border-color 0.2s ease, background 0.2s ease;
+      }
+      .pill:hover {
+        border-color: rgba(164,172,255,0.45);
+        background: rgba(164,172,255,0.12);
+      }
+
+      @media (max-width: 850px) {
+        .founder-layout { flex-direction: column; align-items: center; }
+        .founder-layout__img { width: 180px; }
+        .founder-layout__text { text-align: left; }
+      }
+    </style>
   </head>
 
   <body>
-
     <div class="navbar">
-
-
-      <header>
-        <h1>Nobleware Softworks</h1>
-      </header>
-
-        <div class="temp">
-          <button id="drop"><img src='logo1.png'></button>
-      
-      
-        
-          <ul id="list">
-            <li class="home-li"><a href="index.html">Home</a></li>
-            <li><a class="active-link" aria-current="page" href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a class="accent-link" href="book.html">Book Now</a></li>
-          </ul>
-        </div>
-      
+      <header><h1>Nobleware Softworks</h1></header>
+      <div class="temp">
+        <button id="drop"><img src='logo1.png'></button>
+        <ul id="list">
+          <li class="home-li"><a href="index.html">Home</a></li>
+          <li><a class="active-link" aria-current="page" href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a class="accent-link" href="book.html">Book Now</a></li>
+        </ul>
       </div>
-
     </div>
 
     <div class="otherpage">
 
-    <div>
-    <h1>About</h1>
+      <!-- Hero -->
+      <div class="pg-hero fade-up">
+        <span class="pg-eyebrow">Who We Are</span>
+        <h1>About Nobleware</h1>
+        <hr class="pg-divider">
+        <p>A White Rock–based software company serving businesses across Vancouver and the Lower Mainland with custom software, SEO, and web development since 2024.</p>
+      </div>
 
-    <p>Nobleware Softworks specializes in developing and implementing customized software applications to address specific business needs and improve operational efficiency. Since 2024 we have been providing our services to local business in Vancouver, and the lower mainland. Our team is made up of experienced professionals, software engineers, project managers, UX/UI designers, and analysts who bring a wealth of knowledge and expertise to every project.</p>
+      <!-- About body -->
+      <div class="about-body fade-up delay-1">
+        <span class="sec-label">Our Mission</span>
+        <h2>Built for Local Business</h2>
+        <p>Nobleware Softworks specializes in developing and implementing customized software applications to address specific business needs and improve operational efficiency. Our team is made up of experienced professionals — software engineers, project managers, UX/UI designers, and analysts — who bring a wealth of knowledge and expertise to every project.</p>
+        <p>We partner with companies of all sizes, identifying and delivering solutions that best fit their unique scope and requirements. We are committed to innovation, customer satisfaction, and establishing long-lasting relationships with our clients.</p>
+        <div class="generalButtons" style="margin-left:0; margin-top:1em;">
+          <button onclick="location.href='services.html'">Our Services &#10148;</button>
+        </div>
+      </div>
 
-    
-    <p>Nobleware partners with companies of all sizes, identifying and delivering solutions that best fit their unique scope and requirements. We are commited to innovation, customer satisfaction, and establishing long lasting relationships with our clients.</p>
-      
-    <div class ="generalButtons">
-    <button onclick="location.href='services.html'" style="margin-left: -2em;">Our Services &#10148</button>
+      <!-- Founder -->
+      <div class="founder-section fade-up">
+        <span class="sec-label">Leadership</span>
+        <div class="founder-layout">
+          <img draggable="false" class="founder-layout__img portrait" src="../portrait.png" alt="Tolga Olcay — President, Nobleware Softworks">
+          <div class="founder-layout__text">
+            <p class="founder-layout__name">Tolga Olcay</p>
+            <span class="founder-layout__title">President &amp; Founder</span>
+            <p class="founder-layout__bio">Tolga is a White Rock local with years of experience in software design, development, and architecture. With his passion for computer science, Tolga founded Nobleware Softworks with the goal of creating software that is truly noble. Under his care, Nobleware Softworks continues to pursue meaningful relationships with businesses in his community — delivering solutions that are scalable, elegant, and built to last.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Keyword pills -->
+      <div class="pills-section fade-up">
+        <span class="sec-label">What We Do</span>
+        <h2>Services &amp; Expertise</h2>
+        <div class="pills">
+          <span class="pill">Custom Software Development</span>
+          <span class="pill">App Development Vancouver</span>
+          <span class="pill">SEO Lower Mainland</span>
+          <span class="pill">Web Development Surrey</span>
+          <span class="pill">Business Automation</span>
+          <span class="pill">Workflow Optimization</span>
+          <span class="pill">Google Business Profile</span>
+          <span class="pill">UX/UI Design</span>
+          <span class="pill">Software Architecture</span>
+          <span class="pill">Small Business Technology</span>
+          <span class="pill">White Rock Tech Company</span>
+          <span class="pill">Digital Transformation</span>
+        </div>
+      </div>
+
+      <br><br><br>
     </div>
-    <br><br>
-    
-    
-    <h2>Founder</h2>
-    </div>
-    <div style="display:flex; justify-content: center; flex-direction: column; align-items: center;">
-
-    <img draggable="false" class="portrait" src="../portrait.png" style="width:250px;">
-    <p>Tolga Olcay</p>
-    <p>President</p>
-    <p>Tolga is a White Rock local with years of experience in software design, development, and architecture. 
-      With his passion of computer science, Tolga founded Nobleware Softworks with the goal of creating software that is truly - noble.
-      Under his care, Nobleware Softworks continues to pursue in creating meaningful relationships with businesses in his community.</p>
-    
-
-    <br><br><br>
-    </div></div>
   </body>
 
   <footer>
-
     <div class="rear">
-    <h2>Nobleware Softworks</h2>
-    <h3>Pages</h3>
-    <p>Learn more about how our services help businesses in the lower mainland</p>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="book.html">Book Now</a></li>
-    </ul>
-    <hr>
-    <h3>Contact</h3>
-    <p>Contact us to schedule a free consultation</p>
-    <ul>
-      <li><a href="https://www.linkedin.com/in/tolga-olcay-81aa63274/"><img src="LinkedIn.png"></a></li>
-      <li><a href="tel:604-309-0249">(604)-309-0249</a></li>
-      <li><a href="mailto:info@noblewaresoftworks.com?subject=Hello%20there&body=I%20wanted%20to%20reach%20out%20to%20you.">info@noblewaresoftworks.com</a></li>
-    </ul>
-
-    <br>
-    <p>Nobleware Softworks&nbsp;&nbsp;|&nbsp;&nbsp;All Rights Reserved. (2025)&nbsp;&nbsp;|&nbsp;&nbsp;<a href="privacy-policy.html" style="color: #a4acff; text-decoration: underline; text-underline-offset: 3px;">Privacy Policy</a></p>
-    
-    
+      <h2>Nobleware Softworks</h2>
+      <h3>Pages</h3>
+      <p>Learn more about how our services help businesses in the lower mainland</p>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="book.html">Book Now</a></li>
+      </ul>
+      <hr>
+      <h3>Contact</h3>
+      <p>Contact us to schedule a free consultation</p>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/tolga-olcay-81aa63274/"><img src="LinkedIn.png"></a></li>
+        <li><a href="tel:604-309-0249">(604)-309-0249</a></li>
+        <li><a href="mailto:info@noblewaresoftworks.com?subject=Hello%20there&body=I%20wanted%20to%20reach%20out%20to%20you.">info@noblewaresoftworks.com</a></li>
+      </ul>
+      <br>
+      <p>Nobleware Softworks&nbsp;&nbsp;|&nbsp;&nbsp;All Rights Reserved. (2025)&nbsp;&nbsp;|&nbsp;&nbsp;<a href="privacy-policy.html" style="color: #a4acff; text-decoration: underline; text-underline-offset: 3px;">Privacy Policy</a></p>
     </div>
-    </footer>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
 </html>

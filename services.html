@@ -7,127 +7,225 @@ created by Tolga Olcay 2024
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
-    <meta name = "theme-color" content="#08080c">
-    
-    <title>Nobleware Softworks</title>
+    <meta name="theme-color" content="#08080c">
+    <meta name="description" content="Nobleware Softworks offers custom app development, SEO, and web development services for businesses in Vancouver, Surrey, and the BC Lower Mainland." />
+    <title>Services — Nobleware Softworks</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
-
-    
     <script type="module" src="js/script.js"></script>
     <script defer type="module" src="js/main.js"></script>
     <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      /* ── Scroll reveal ── */
+      .fade-up {
+        opacity: 0;
+        transform: translateY(2rem);
+        transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1),
+                    transform 0.7s cubic-bezier(0.22,1,0.36,1);
+      }
+      .fade-up.visible { opacity: 1; transform: translateY(0); }
+      .fade-up.delay-1 { transition-delay: 0.12s; }
+      .fade-up.delay-2 { transition-delay: 0.22s; }
+
+      /* ── Hero ── */
+      .pg-hero {
+        width: 100%;
+        max-width: 760px;
+        padding-bottom: 2.5em;
+        border-bottom: 1px solid rgba(164,172,255,0.1);
+        margin-bottom: 3em;
+      }
+      .pg-eyebrow {
+        display: block;
+        font-size: 0.7em;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #a4acff;
+        margin-bottom: 0.5em;
+      }
+      .pg-hero h1 {
+        font-size: clamp(2rem, 5vw, 2.8rem);
+        color: #ffffff;
+        margin: 0 0 0.4em;
+        font-weight: 700;
+      }
+      .pg-divider {
+        width: 48px; height: 2px;
+        background: #5b5dff;
+        margin: 0.75em 0 1em;
+        border: none;
+      }
+      .pg-hero p {
+        max-width: 52em;
+        text-align: left;
+        color: #6b758a;
+        font-size: 0.95em;
+        line-height: 1.8;
+        margin: 0;
+      }
+
+      /* ── Service sections ── */
+      .svc-section {
+        width: 100%;
+        max-width: 760px;
+        padding-bottom: 3em;
+        margin-bottom: 3em;
+        border-bottom: 1px solid rgba(164,172,255,0.1);
+      }
+      .svc-section:last-of-type {
+        border-bottom: none;
+      }
+      .svc-section h2 {
+        font-size: 1.5em;
+        color: #ffffff;
+        font-weight: 700;
+        margin: 0 0 0.6em;
+      }
+      .svc-section p {
+        font-size: 0.92em;
+        color: #c9c9c9;
+        line-height: 1.85;
+        text-align: justify;
+        max-width: none;
+        margin-bottom: 1.25em;
+      }
+
+      /* ── Keyword pills ── */
+      .svc-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5em;
+        margin-bottom: 1.25em;
+      }
+      .svc-tag {
+        font-size: 0.75em;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        padding: 0.35em 0.9em;
+        border-radius: 100px;
+        border: 1px solid rgba(164,172,255,0.2);
+        color: #a4acff;
+        background: rgba(164,172,255,0.05);
+      }
+    </style>
   </head>
 
   <body>
-
     <div class="navbar">
+      <header><h1>Nobleware Softworks</h1></header>
+      <div class="temp">
+        <button id="drop"><img src='logo1.png'></button>
+        <ul id="list">
+          <li class="home-li"><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a class="active-link" aria-current="page" href="services.html">Services</a></li>
+          <li><a class="accent-link" href="book.html">Book Now</a></li>
+        </ul>
+      </div>
+    </div>
 
+    <div class="otherpage">
 
-      <header>
-        <h1>Nobleware Softworks</h1>
-      </header>
-
-        <div class="temp">
-          <button id="drop"><img src='logo1.png'></button>
-      
-      
-        
-          <ul id="list">
-            <li class="home-li"><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a class="active-link" aria-current="page" href="services.html">Services</a></li>
-            <li><a class="accent-link" href="book.html">Book Now</a></li>
-          </ul>
+      <!-- Hero -->
+      <div class="pg-hero fade-up">
+        <span class="pg-eyebrow">What We Offer</span>
+        <h1>Our Services</h1>
+        <hr class="pg-divider">
+        <p>Say goodbye to paperwork. Nobleware Softworks helps local businesses in Vancouver and the Lower Mainland streamline operations, grow online, and build technology that works for them.</p>
+        <div class="generalButtons" style="margin-left:0; margin-top:1.5em;">
+          <button onclick="location.href='book.html'" style="color:#ffd255; font-size:large; border:3px solid #ffd255;">Book a Free Consultation &#10148;</button>
         </div>
-      
       </div>
 
-    </div>
-    <div class="otherpage">
-    <div>
-    <h1>Our Services</h1>
-    <h3>Say Good-Bye to paperwork!</h3>
-      <p>Instead of spending precious time with invoicing, estimating, inventory Management, and mountains of paperwork - Invest in growing your business by optimizing your workflow. Nobleware Softworks has a sophisticated system 
-        for identifying bottlenecks within a business, and creating solutions that bring value to our clients.
-      </p>
-      
-        <div class ="generalButtons">
-          <button onclick="location.href='book.html'" style="color: #ffd255; font-size:large; border: 3px solid #ffd255; margin-left: -2em;">Book Now &#10148</button>
+      <!-- App Development -->
+      <div class="svc-section fade-up" id="appDev">
+        <h2>App Development</h2>
+        <p>As the scope of your business grows, bottlenecks that slow down your operations have a severe impact on revenue. Our software solutions have boosted productivity for businesses across Vancouver by streamlining their pipelines and increasing efficiency by over 50%. Our solutions are scalable and adaptable for future iterations — so as your business grows, your technology keeps up.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">Custom Software</span>
+          <span class="svc-tag">Business Automation</span>
+          <span class="svc-tag">Invoicing Systems</span>
+          <span class="svc-tag">Inventory Management</span>
+          <span class="svc-tag">Workflow Optimization</span>
+          <span class="svc-tag">Vancouver App Developer</span>
         </div>
-      <br id="appDev"><br><br>
-    </div>  
-
-    <div>
-    <h2>App Development</h2>
-    <p>As the scope of your business grows, bottlenecks that slow down the processes of your business operations have a severe impact on your revenue. 
-      Our wide range of software solutions have boosted productivity for businesses across Vancouver, by streamlining their business pipeline and increasing productivity by over 50%. 
-      Our solutions are scalable and adaptable for future iterations, so as the scope of your business grows, you can always stay one step ahead in futureproofing your workflow. </p>
-    
-
-        <div class ="generalButtons">
-          <button onclick="location.href='book.html'" style=" font-size:large; border: 3px solid; margin-left: -2em;">Get Started &#10148</button>
+        <div class="generalButtons" style="margin-left:0;">
+          <button onclick="location.href='book.html'" style="font-size:large; border:3px solid;">Get Started &#10148;</button>
         </div>
-        <br id="SEO"><br><br>
+      </div>
 
-    </div>
-
-    <div>
-
-    
-    <h2>SEO</h2>
-    <p>As industries continue to take advantage of having a web presence, it becomes harder to stand out in the crowded online marketplace. By having good Search Engine Optimization (SEO) your website will 
-      rank higher on search engines like Google, attracting more visitors, and turning those visitors to loyal customers, all while maximizing your return on investment.
-    By optimizing your Google Business Profile, page indexing, keyword quality, and backlinking, we have increased impressions for our clients by over 400%.</p>
-    
-        <div class ="generalButtons">
-          <button onclick="location.href='book.html'" style=" font-size:large; border: 3px solid; margin-left: -2em;">Get Started &#10148</button>
+      <!-- SEO -->
+      <div class="svc-section fade-up delay-1" id="SEO">
+        <h2>SEO</h2>
+        <p>As industries continue to take advantage of having a web presence, it becomes harder to stand out in the crowded online marketplace. By having good Search Engine Optimization, your website will rank higher on Google — attracting more visitors and turning them into loyal customers. By optimizing your Google Business Profile, page indexing, keyword quality, and backlinking, we have increased impressions for our clients by over 400%.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">SEO Vancouver</span>
+          <span class="svc-tag">Google Business Profile</span>
+          <span class="svc-tag">Local SEO</span>
+          <span class="svc-tag">Keyword Optimization</span>
+          <span class="svc-tag">Backlinking</span>
+          <span class="svc-tag">Search Rankings Lower Mainland</span>
         </div>
-        <br id="webDev"><br><br>
-    </div>
-
-    <div>
-    <h2>Web Development</h2>
-    <p>In today's digital landscape, having a website does more than just establishing a brand Identity. It allows you to reach a wider audience and enhance your credibility as a business.  Our team of professional web developpers can build stunning websites from scratch with custom domain names, or update existing websites to a modern and professional standard.</p>
-
-        <div class ="generalButtons">
-          <button onclick="location.href='book.html'" style=" font-size:large; border: 3px solid; margin-left: -2em;">Get Started &#10148</button>
+        <div class="generalButtons" style="margin-left:0;">
+          <button onclick="location.href='book.html'" style="font-size:large; border:3px solid;">Get Started &#10148;</button>
         </div>
-        <br><br><br>
-    </div>
+      </div>
 
+      <!-- Web Development -->
+      <div class="svc-section fade-up delay-2" id="webDev">
+        <h2>Web Development</h2>
+        <p>In today's digital landscape, having a website does more than establish a brand identity — it allows you to reach a wider audience and enhance your credibility as a business. Our team of professional web developers can build stunning websites from scratch with custom domain names, or update existing websites to a modern and professional standard.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">Web Development Surrey</span>
+          <span class="svc-tag">Custom Websites</span>
+          <span class="svc-tag">Responsive Design</span>
+          <span class="svc-tag">Website Redesign</span>
+          <span class="svc-tag">Lower Mainland Web Dev</span>
+          <span class="svc-tag">Business Websites</span>
+        </div>
+        <div class="generalButtons" style="margin-left:0;">
+          <button onclick="location.href='book.html'" style="font-size:large; border:3px solid;">Get Started &#10148;</button>
+        </div>
+      </div>
+
+      <br><br>
     </div>
   </body>
 
   <footer>
-
     <div class="rear">
-    <h2>Nobleware Softworks</h2>
-    <h3>Pages</h3>
-    <p>Learn more about how our services help businesses in the lower mainland</p>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="book.html">Book Now</a></li>
-    </ul>
-    <hr>
-    <h3>Contact</h3>
-    <p>Contact us to schedule a free consultation</p>
-    <ul>
-      <li><a href="https://www.linkedin.com/in/tolga-olcay-81aa63274/"><img src="LinkedIn.png"></a></li>
-      <li><a href="tel:604-309-0249">(604)-309-0249</a></li>
-      <li><a href="mailto:info@noblewaresoftworks.com?subject=Hello%20there&body=I%20wanted%20to%20reach%20out%20to%20you.">info@noblewaresoftworks.com</a></li>
-    </ul>
-
-    <br>
-    <p>Nobleware Softworks&nbsp;&nbsp;|&nbsp;&nbsp;All Rights Reserved. (2025)&nbsp;&nbsp;|&nbsp;&nbsp;<a href="privacy-policy.html" style="color: #a4acff; text-decoration: underline; text-underline-offset: 3px;">Privacy Policy</a></p>
-    
-    
+      <h2>Nobleware Softworks</h2>
+      <h3>Pages</h3>
+      <p>Learn more about how our services help businesses in the lower mainland</p>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="book.html">Book Now</a></li>
+      </ul>
+      <hr>
+      <h3>Contact</h3>
+      <p>Contact us to schedule a free consultation</p>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/tolga-olcay-81aa63274/"><img src="LinkedIn.png"></a></li>
+        <li><a href="tel:604-309-0249">(604)-309-0249</a></li>
+        <li><a href="mailto:info@noblewaresoftworks.com?subject=Hello%20there&body=I%20wanted%20to%20reach%20out%20to%20you.">info@noblewaresoftworks.com</a></li>
+      </ul>
+      <br>
+      <p>Nobleware Softworks&nbsp;&nbsp;|&nbsp;&nbsp;All Rights Reserved. (2025)&nbsp;&nbsp;|&nbsp;&nbsp;<a href="privacy-policy.html" style="color: #a4acff; text-decoration: underline; text-underline-offset: 3px;">Privacy Policy</a></p>
     </div>
-    </footer>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
 </html>
